@@ -1,31 +1,40 @@
-# EShoppingZone Cloud Config Repository (abulconfig)
+# EShoppingZone Cloud Config Repository
 
-This folder contains the centralized configuration properties for all microservices in the EShoppingZone project.
+Official Remote Config Repository:
+`https://github.com/Abulhasan06/abuleshoppingnewconfigserver.git`
 
-## How to push these files to your GitHub Repository
-
-Run the following commands in PowerShell from inside this `abulconfig` directory:
+## Commands to Push / Update to GitHub:
 
 ```bash
 cd "C:\Users\user\Documents\abulEshopping\abulconfig"
 git init
 git add .
-git commit -m "Centralized Cloud Config properties for EShoppingZone microservices"
+git commit -m "Update microservices cloud configuration with v4 clean databases"
 git branch -M main
 git remote add origin https://github.com/Abulhasan06/abuleshoppingnewconfigserver.git
 git push -u origin main --force
 ```
 
-## Files included:
-- `application.properties` (Global shared configuration, Eureka URL, Actuator endpoints)
-- `api-gateway.properties` (Routing definitions for all services)
-- `auth-service.properties` (Port 8081, eshopping_auth_v3, JWT token settings)
-- `profile-service.properties` (Port 8082, eshopping_profile_v3)
-- `product-service.properties` (Port 8083, eshopping_product_v3)
-- `cart-service.properties` (Port 8084, eshopping_cart_v3)
-- `order-service.properties` (Port 8085, eshopping_order_v3)
-- `payment-service.properties` (Port 8086, eshopping_payment_v3, 90/10 split settings)
-- `delivery-service.properties` (Port 8087, eshopping_delivery_v3)
-- `notification-service.properties` (Port 8088, eshopping_notification_v3, SMTP Mail)
-- `wallet-service.properties` (Port 8089, eshopping_wallet_v3)
-- `website-controller.properties` (Port 8090, UI, Gateway service URLs)
+## How to Delete Previous Files from Git Repo (Clean Overwrite):
+```bash
+cd "C:\Users\user\Documents\abulEshopping\abulconfig"
+git rm -rf *
+git commit -m "Clean previous config"
+git add .
+git commit -m "Add latest clean v4 microservices properties"
+git push origin main --force
+```
+
+### Config Files Included:
+- `application.properties`
+- `api-gateway.properties`
+- `auth-service.properties`
+- `profile-service.properties`
+- `product-service.properties`
+- `cart-service.properties`
+- `order-service.properties`
+- `payment-service.properties`
+- `delivery-service.properties`
+- `notification-service.properties`
+- `wallet-service.properties`
+- `website-controller.properties`
